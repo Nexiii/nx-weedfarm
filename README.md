@@ -1,7 +1,7 @@
 # nx-weedfarm
 Simple Weedfarming script using QB-Core
 
-#originally created by TRClassic, modified by Nexiii
+# originally created by TRClassic, modified by Nexiii
 https://github.com/trclassic92/tr-orangefarm
 
 # Dependencies (QB):
