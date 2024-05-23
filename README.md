@@ -24,6 +24,6 @@ Step 1. Copy this at the bottom at [qb]/qb-core/shared/items.lua
 
 ```
 
-Step 2. Move the images from the tr-orangefarming/images to [qb]\qb-inventory\html\images
+Step 2. Move the images from the nx-weedfarm/images to [qb]/qb-inventory/html/images
 
 Step 3. Ensure it in your config or just drag and drop it in [qb] (should start everything in [qb])
