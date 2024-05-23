@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 
 author 'Nexiii, ProjectX'
-description 'Resource originally made by ProjextX modified by Nexiii to be a simple Weedfarming script'
+description 'Resource originally made by TRClassic modified by Nexiii to be a simple Weedfarming script'
 version '0.1_BETA'
 
 shared_script {
