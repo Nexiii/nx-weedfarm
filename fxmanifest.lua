@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'Nexiii, ProjectX'
 description 'Resource originally made by ProjextX modified by Nexiii to be a simple Weedfarming script'
-version '1.0.0'
+version '0.1_BETA'
 
 shared_script {
     '@ox_lib/init.lua',
