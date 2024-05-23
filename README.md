@@ -14,7 +14,7 @@ https://github.com/trclassic92/tr-orangefarm
 
 
 # Install QBCore-
-Step 1. Copy this at the bottom at [qb]/qb-core/shared/items.lua
+Step 1. Copy this at the bottom of [qb]/qb-core/shared/items.lua
 
 ```
 --NX Weedfarm
