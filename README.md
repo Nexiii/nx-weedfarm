@@ -21,9 +21,9 @@ qb-core/shared/item.lua
 Step 1. Copy this at the bottom at [qb]/qb-core/shared/items.lua
 ```
 --NX Weedfarm
-	["dirtymoney"]                   = {["name"] = "dirtymoney",                    ["label"] = "Dirty Money",              ["weight"] = 0,         ["type"] = "item",      ["image"] = "dirtymoney.png",           ["unique"] = false,		["useable"] = true,     ["shouldClose"] = false,    ["combinable"] = nil,  ["description"] = "The ill-gotten proceeds of criminal activity."},
-	['cannabis'] 						 = {['name'] = 'cannabis', 						['label'] = 'Cannabis', 				['weight'] = 25, 		['type'] = 'item', 		['image'] = 'cannabis.png', 		['unique'] = false, 		['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Knolle Cannabis'},
-	['weed_baggy'] 			 	        = {['name'] = 'weed_baggy', 					['label'] = 'Weed Baggy', 			['weight'] = 75, 		['type'] = 'item', 		['image'] = 'weed_baggy.png', 		['unique'] = false, 		['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Isn Weed Baggy du kek'},
+["dirtymoney"]                   = {["name"] = "dirtymoney",                    ["label"] = "Dirty Money",              ["weight"] = 0,         ["type"] = "item",      ["image"] = "dirtymoney.png",       ["unique"] = false,		    ["useable"] = true,     ["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "The ill-gotten proceeds of criminal activity."},
+['cannabis'] 					 = {['name'] = 'cannabis', 						['label'] = 'Cannabis', 				['weight'] = 25, 		['type'] = 'item', 		['image'] = 'cannabis.png', 		['unique'] = false, 		['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'bulb of cannabis, could be packed'},
+['weed_baggy'] 			 	     = {['name'] = 'weed_baggy', 					['label'] = 'Weed Baggy', 			    ['weight'] = 75, 		['type'] = 'item', 		['image'] = 'weed_baggy.png', 		['unique'] = false, 		['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'bunch of cannabis in a baggy, could be selled'},
 
 ```
 #### Images
