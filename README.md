@@ -13,12 +13,9 @@ https://github.com/trclassic92/tr-orangefarm
 - [qb-core](https://github.com/qbcore-framework/qb-core)
 
 
-# Install QBCore
-#### Items
-
-qb-core/shared/item.lua
-
+# Install QBCore-
 Step 1. Copy this at the bottom at [qb]/qb-core/shared/items.lua
+
 ```
 --NX Weedfarm
 ["dirtymoney"]                   = {["name"] = "dirtymoney",                    ["label"] = "Dirty Money",              ["weight"] = 0,         ["type"] = "item",      ["image"] = "dirtymoney.png",       ["unique"] = false,		    ["useable"] = true,     ["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "The ill-gotten proceeds of criminal activity."},
@@ -26,7 +23,6 @@ Step 1. Copy this at the bottom at [qb]/qb-core/shared/items.lua
 ['weed_baggy'] 			 	     = {['name'] = 'weed_baggy', 					['label'] = 'Weed Baggy', 			    ['weight'] = 75, 		['type'] = 'item', 		['image'] = 'weed_baggy.png', 		['unique'] = false, 		['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'bunch of cannabis in a baggy, could be selled'},
 
 ```
-#### Images
 
 Step 2. Move the images from the tr-orangefarming/images to [qb]\qb-inventory\html\images
 
