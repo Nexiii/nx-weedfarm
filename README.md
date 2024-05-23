@@ -1,7 +1,8 @@
 # nx-weedfarm
-Simple QB-Target based Weedfarming script using QB-Core
+Simple Weedfarming script using QB-Core
 
-originally created by ProjectX, modified by Nexiii
+originally created by TRClassic, modified by Nexiii
+https://github.com/trclassic92/tr-orangefarm
 
 # Dependencies (QB):
 - [CircleMinigame](https://github.com/trclassic92/CircleMinigame)
