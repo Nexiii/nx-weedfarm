@@ -68,7 +68,7 @@ local function LoadESXVersion()
             end
         end
         if price > 0 then
-            xPlayer.addMoney(price)
+            xPlayer.removeInventoryItem(dirtymoney,price)
             TriggerClientEvent('esx:showNotification', src, Config.Text["successfully_sold"], "success")
         else
             TriggerClientEvent('esx:showNotification', src, Config.Text["NoItem"], "error")
@@ -91,7 +91,7 @@ local function LoadESXVersion()
             end
         end
         if price > 0 then
-            xPlayer.addMoney(price)
+            xPlayer.removeInventoryItem(dirtymoney,price)
             TriggerClientEvent('esx:showNotification', src, Config.Text["successfully_sold1"], "success")
         else
             TriggerClientEvent('esx:showNotification', src, Config.Text["NoItem1"], "error")
