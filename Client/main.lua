@@ -27,14 +27,14 @@ local function LoadESXVersion()
         while (not HasModelLoaded(PedModel)) do
             Wait(1)
         end
-        OrangeFarmer1 = CreatePed(1, PedModel, PedCoords, false, true)
-        OrangeFarmer2 = CreatePed(1, PedModel, PedCoords1, false, true)
-        SetEntityInvincible(OrangeFarmer1, true)
-        SetBlockingOfNonTemporaryEvents(OrangeFarmer1, true)
-        FreezeEntityPosition(OrangeFarmer1, true)
-        SetEntityInvincible(OrangeFarmer2, true)
-        SetBlockingOfNonTemporaryEvents(OrangeFarmer2, true)
-        FreezeEntityPosition(OrangeFarmer2, true)
+        CannabisPed1 = CreatePed(1, PedModel, PedCoords, false, true)
+        CannabisPed2 = CreatePed(1, PedModel, PedCoords1, false, true)
+        SetEntityInvincible(CannabisPed1, true)
+        SetBlockingOfNonTemporaryEvents(CannabisPed1, true)
+        FreezeEntityPosition(CannabisPed1, true)
+        SetEntityInvincible(CannabisPed2, true)
+        SetBlockingOfNonTemporaryEvents(CannabisPed2, true)
+        FreezeEntityPosition(CannabisPed2, true)
     end)
 
     CreateThread(function()
@@ -69,7 +69,7 @@ local function LoadESXVersion()
                 label = Config.Text["ProcessingLabel"],
             },
             {
-                name = 'SellingRawCannabiss',
+                name = 'SellingRawCannabis',
                 event = 'nx-weedfarm:SellRawCannabis',
                 icon = 'fa-solid fa-hand-holding-dollar',
                 label = Config.Text["SellCannabisLabel"],
@@ -84,7 +84,7 @@ local function LoadESXVersion()
         debug = false,
         options = {
             {
-                name = 'SellBaggyss',
+                name = 'SellBaggys',
                 event = 'nx-weedfarm:SellingBaggys',
                 icon = 'fa-solid fa-bottle-water',
                 label = Config.Text["SellBaggys"],
@@ -92,7 +92,7 @@ local function LoadESXVersion()
         }
     })
 
-    --Orange Picking Event
+    --Cannabis Picking Event
     RegisterNetEvent('nx-weedfarm:PickingCannabis', function()
         local Ped = PlayerPedId()
         --local time = math.random(Config.Picking.CirlceMinigame.minSeconds, Config.Picking.CirlceMinigame.maxSeconds)
@@ -109,14 +109,10 @@ local function LoadESXVersion()
                     car = true,
                 },
                 anim = {
-                    dict = 'missmechanic',
-                    clip = 'work_base'
+                    dict = 'anim@amb@business@weed@weed_inspecting_lo_med_hi@',
+                    clip = 'weed_stand_checkingleaves_idle_02_inspector'
                 },
-                prop = {
-                    model = `ng_proc_food_ornge1a`,
-                    pos = vec3(0.03, 0.03, 0.03),
-                    rot = vec3(0.0, 0.0, -1.5)
-                },
+                prop {},
             })
             TriggerServerEvent('nx-weedfarm:GatherCannabis')
         else
@@ -222,14 +218,14 @@ local function LoadQBVersion()
         while (not HasModelLoaded(PedModel)) do
             Wait(1)
         end
-        OrangeFarmer1 = CreatePed(1, PedModel, PedCoords, false, true)
-        OrangeFarmer2 = CreatePed(1, PedModel, PedCoords1, false, true)
-        SetEntityInvincible(OrangeFarmer1, true)
-        SetBlockingOfNonTemporaryEvents(OrangeFarmer1, true)
-        FreezeEntityPosition(OrangeFarmer1, true)
-        SetEntityInvincible(OrangeFarmer2, true)
-        SetBlockingOfNonTemporaryEvents(OrangeFarmer2, true)
-        FreezeEntityPosition(OrangeFarmer2, true)
+        CannabisPed1 = CreatePed(1, PedModel, PedCoords, false, true)
+        CannabisPed2 = CreatePed(1, PedModel, PedCoords1, false, true)
+        SetEntityInvincible(CannabisPed1, true)
+        SetBlockingOfNonTemporaryEvents(CannabisPed1, true)
+        FreezeEntityPosition(CannabisPed1, true)
+        SetEntityInvincible(CannabisPed2, true)
+        SetBlockingOfNonTemporaryEvents(CannabisPed2, true)
+        FreezeEntityPosition(CannabisPed2, true)
     end)
 
     if Config.Target == "OX" then
@@ -265,7 +261,7 @@ local function LoadQBVersion()
                     label = Config.Text["ProcessingLabel"],
                 },
                 {
-                    name = 'SellingRawCannabiss',
+                    name = 'SellingRawCannabis',
                     event = 'nx-weedfarm:SellRawCannabis',
                     icon = 'fa-solid fa-hand-holding-dollar',
                     label = Config.Text["SellCannabisLabel"],
@@ -280,7 +276,7 @@ local function LoadQBVersion()
             debug = false,
             options = {
                 {
-                    name = 'SellBaggyss',
+                    name = 'SellBaggys',
                     event = 'nx-weedfarm:SellingBaggys',
                     icon = 'fa-solid fa-bottle-water',
                     label = Config.Text["SellBaggys"],
@@ -290,7 +286,7 @@ local function LoadQBVersion()
     elseif Config.Target == "QB" then
         CreateThread(function()
             for _, v in pairs(WeedPlants) do
-                exports['qb-target']:AddBoxZone("Plants" .. v.name, vector3(v.coords.x, v.coords.y, v.coords.z), v.size.x, v.size.y, {
+                exports['qb-target']:AddBoxZone("WeedPlants" .. v.name, vector3(v.coords.x, v.coords.y, v.coords.z), v.size.x, v.size.y, {
                     name = "tree".. v.name,
                     heading = v.heading,
                     debugPoly = false,
@@ -327,7 +323,7 @@ local function LoadQBVersion()
                 },
                 {
                 type = "client",
-                name = 'SellingRawCannabiss',
+                name = 'SellingRawCannabis',
                 event = 'nx-weedfarm:SellRawCannabis',
                 icon = 'fa-solid fa-hand-holding-dollar',
                 label = Config.Text["SellCannabisLabel"],
@@ -345,7 +341,7 @@ local function LoadQBVersion()
             options = {
               {
                 type = "client",
-                name = 'SellBaggyss',
+                name = 'SellBaggys',
                 event = 'nx-weedfarm:SellingBaggys',
                 icon = 'fa-solid fa-bottle-water',
                 label = Config.Text["SellBaggys"],
@@ -355,7 +351,7 @@ local function LoadQBVersion()
         })
     end
 
-    --Orange Picking Event
+    --Cannabis Picking Event
     RegisterNetEvent('nx-weedfarm:PickingCannabis', function()
         local Ped = PlayerPedId()
         --local time = math.random(Config.Picking.CirlceMinigame.minSeconds, Config.Picking.CirlceMinigame.maxSeconds)
@@ -372,14 +368,10 @@ local function LoadQBVersion()
                     car = true,
                 },
                 anim = {
-                    dict = 'missmechanic',
-                    clip = 'work_base'
+                    dict = 'anim@amb@business@weed@weed_inspecting_lo_med_hi@',
+                    clip = 'weed_stand_checkingleaves_idle_02_inspector'
                 },
-                prop = {
-                    model = `ng_proc_food_ornge1a`,
-                    pos = vec3(0.03, 0.03, 0.03),
-                    rot = vec3(0.0, 0.0, -1.5)
-                },
+                prop = {},
             })
             TriggerServerEvent('nx-weedfarm:GatherCannabis')
         else

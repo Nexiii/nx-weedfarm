@@ -16,7 +16,7 @@ local function LoadQBVersion()
     RegisterNetEvent('nx-weedfarm:GatherCannabis', function()
         local src = source
         local Player = QBCore.Functions.GetPlayer(tonumber(source))
-        local orange = math.random(Config.Picking.ReceiveItem.minAmount, Config.Picking.ReceiveItem.maxAmount)
+        local cannabis = math.random(Config.Picking.ReceiveItem.minAmount, Config.Picking.ReceiveItem.maxAmount)
         if checkDistance then
                 Player.Functions.AddItem('cannabis', cannabis)
                 TriggerClientEvent('QBCore:Notify', src, Config.Text["PickedCannabis"], "success")
@@ -29,15 +29,15 @@ local function LoadQBVersion()
     RegisterServerEvent('nx-weedfarm:TradingToWeedBaggys', function()
         local src = source
         local Player = QBCore.Functions.GetPlayer(tonumber(source))
-        local orange = Player.Functions.GetItemByName('cannabis')
+        local cannabis = Player.Functions.GetItemByName('cannabis')
         local processingAmount = Config.Processing.pressingConfig.amount
         local receivingItem = Config.Processing.pressingConfig.receiving
-        if not orange then
+        if not cannabis then
             TriggerClientEvent('QBCore:Notify', src, Config.Text['NoItem'], "error")
             return false
         end
 
-        local amount = orange.amount
+        local amount = cannabis.amount
         if amount >= 1 then
             amount = processingAmount
         else
@@ -56,9 +56,9 @@ local function LoadQBVersion()
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['weed_baggy'], "add")
     end)
 
-    SellOranges = {
-        ["orange"] = {
-            ["price"] = math.random(Config.SellPrice.Rawcannabis.min, Config.SellPrice.Rawcannabis.max)
+    SellCannabis = {
+        ["cannabis"] = {
+            ["price"] = math.random(Config.SellPrice.RawCannabis.min, Config.SellPrice.RawCannabis.max)
         }
     }
 
@@ -66,15 +66,15 @@ local function LoadQBVersion()
         local src = source
         local Player = QBCore.Functions.GetPlayer(src)
         local price = 0
-        local orange = Player.Functions.GetItemByName('cannabis')
-        if not orange then
+        local cannabis = Player.Functions.GetItemByName('cannabis')
+        if not cannabis then
             TriggerClientEvent('QBCore:Notify', src, Config.Text["NoItem"], "error")
-        elseif orange.amount >= 1 then
+        elseif cannabis.amount >= 1 then
             if Player.PlayerData.items ~= nil and next(Player.PlayerData.items) ~= nil then
                 for k, v in pairs(Player.PlayerData.items) do
                     if Player.PlayerData.items[k] ~= nil then
-                        if SellOranges[Player.PlayerData.items[k].name] ~= nil then
-                            price = price + (SellOranges[Player.PlayerData.items[k].name].price * Player.PlayerData.items[k].amount)
+                        if SellCannabis[Player.PlayerData.items[k].name] ~= nil then
+                            price = price + (SellCannabis[Player.PlayerData.items[k].name].price * Player.PlayerData.items[k].amount)
                             Player.Functions.RemoveItem(Player.PlayerData.items[k].name, Player.PlayerData.items[k].amount, k)
                             TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[Player.PlayerData.items[k].name], "remove")
                         end
@@ -96,10 +96,10 @@ local function LoadQBVersion()
         local src = source
         local Player = QBCore.Functions.GetPlayer(src)
         local price = 0
-        local orangeBaggys = Player.Functions.GetItemByName('weed_baggy')
-        if not orangeBaggys then
+        local cannabisBaggys = Player.Functions.GetItemByName('weed_baggy')
+        if not cannabisBaggys then
             TriggerClientEvent('QBCore:Notify', src, Config.Text["NoItem"], "error")
-        elseif orangeBaggys.amount >= 1 then
+        elseif cannabisBaggys.amount >= 1 then
             if Player.PlayerData.items ~= nil and next(Player.PlayerData.items) ~= nil then
                 for k in pairs(Player.PlayerData.items) do
                     if Player.PlayerData.items[k] ~= nil then

@@ -5,7 +5,7 @@ Config.Target = "QB"         -- OX - OX Target | QB - QB Target (Only works for 
 
 Config.UseBlips = true -- True turns blips on | false turns blips off
 
-Config.MinDistance = 2.5 -- Minimal distance from the tree to collect (Exploiter Check)
+Config.MinDistance = 0.5 -- Minimal distance from the tree to collect (Exploiter Check)
 
 Config.Blips = {
     Field = {
@@ -34,7 +34,7 @@ Config.Blips = {
     }
 }
 
-Config.PedModel = "g_m_importexport_01" -- Ped model
+Config.PedModel = "a_m_m_og_boss_01" -- Ped model
 
 Config.Picking = {
     CirlceMinigame = {
@@ -58,7 +58,7 @@ Config.Processing = {
 }
 
 Config.SellPrice = {
-    Rawcannabis = {
+    RawCannabis = {
         min = 150,
         max = 325,
     },
@@ -94,5 +94,5 @@ Config.Text = { -- Text / langs
     FailedPickingCannabis = "Failed to pick Cannabis",
     CancelledProcessing = "Cancelled",
     ErrorProcessingAmount = "Don't have enough Cannabis",
-    NoItem = "You don't have any Cannabis"
+    NoItem = "You don't have any Cannabis or Baggys"
 }
