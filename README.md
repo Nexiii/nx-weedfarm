@@ -1,6 +1,10 @@
 # nx-weedfarm 0.1.1_BETA
 Simple Weedfarming script using QB-Core and CircleMinigame
 
+# Changelog
+
+0.1.1_BETA | Fixed Ped Models and SellRawCannabis bug
+
 # Originally created by TRClassic, modified by Nexiii
 https://github.com/trclassic92/tr-orangefarm
 
