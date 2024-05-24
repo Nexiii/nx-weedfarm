@@ -17,7 +17,7 @@ https://github.com/trclassic92/tr-orangefarm
 - [qb-core](https://github.com/qbcore-framework/qb-core)
 
 
-# Install QBCore-
+# Install QBCore
 Step 1. Copy this at the bottom of [qb]/qb-core/shared/items.lua
 
 ```
