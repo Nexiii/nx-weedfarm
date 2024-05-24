@@ -1,4 +1,4 @@
-# nx-weedfarm 0.1_BETA
+# nx-weedfarm 0.1.1_BETA
 Simple Weedfarming script using QB-Core and CircleMinigame
 
 # Originally created by TRClassic, modified by Nexiii
