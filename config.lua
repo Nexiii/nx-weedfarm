@@ -1,6 +1,6 @@
 Config = {}
 
-Config.Framework = "QB"      -- ESX = ESX Framework  | QB for QBRemastered and QBCore
+Config.Framework = "QB"      -- ESX = ESX Framework [disabled for this version] | QB for QBRemastered and QBCore
 Config.Target = "QB"         -- OX - OX Target | QB - QB Target (Only works for QB)
 
 Config.UseBlips = true -- True turns blips on | false turns blips off
