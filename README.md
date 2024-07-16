@@ -10,7 +10,6 @@ https://github.com/trclassic92/tr-orangefarm
 
 # Dependencies (QB):
 - [CircleMinigame](https://github.com/trclassic92/CircleMinigame)
-- [qb-inventory](https://github.com/qbcore-framework/qb-inventory)
 - [ox_target](https://github.com/overextended/ox_target) (Config Option)
 - [qb-target](https://github.com/qbcore-framework/qb-target) (Config Option)
 - [ox_lib](https://github.com/overextended/ox_lib)
